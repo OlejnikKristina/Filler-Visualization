@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Saira+Stencil+One&display=swap');
+
+body
+{
+	background-color: #F7DAC3;
+	width: 98%;
+	height: 98%;
+	position: absolute;
+}
+
+p
+{
+	display: inline-block;
+}
+
+#grid
+{
+	background-color: #F39B94;
+	margin: auto;
+	min-width: 770px;
+	max-width: 770px;
+	min-height: 600px;
+	max-height: 600px;
+	border: 4px solid #609B9A;
+	border-radius: 1%;
+	-webkit-box-shadow: 10px 4px 37px 0px #ABFFF3;
+	-moz-box-shadow: 10px 4px 37px 0px #ABFFF3;
+	box-shadow: 10px 4px 37px 0px #ABFFF3;
+	transition: all 0.3s ease-in-out;
+}
+
+#grid:hover
+{
+	box-shadow: 0 5px 15px 2px rgba(0, 0, 0, 0.1);
+}
+
+.battle
+{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+h1, .score p
+{
+	letter-spacing: 2px;
+	min-width: 220px;
+	max-width: 220px;
+	padding: 0px 15px;
+	margin: 10px;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: 'Saira Stencil One', sans-serif;
+	color: #8ac6d1;
+	text-shadow: 2px 2px #F39B94;
+	font-size: 50px;
+	border-radius: 5px;
+	border: 2px solid #F39B94;
+	background-color: #F687BF;
+
+}
+
+#map_src
+{
+	width: 350px;
+	height: 130px;
+	color: #609B9A;
+	font-size: 16px;
+	font-family: 'Saira Stencil One', sans-serif;
+}
+
+.main_form
+{
+	display: flex;
+	justify-content: center;
+	padding-top: 20px;
+}
+
+#map_src_form
+{
+	box-sizing: content-box;
+	text-align: center;
+	width: 360px;
+	display: flex;
+	flex-direction: column;
+	background-color:#96F0AC;
+	padding: 20px;
+	font-size: 20px;
+	border-radius: 1%;
+	font-family: 'Roboto', sans-serif;
+	color: #609B9A;
+	letter-spacing: 2px;
+}
+
+#map_src_form p
+{
+	margin: 7px;
+	font-size: 30px;
+	background-color: #8ac6d1;
+	text-align: center;
+}
+
+input[name=choose_speed]
+{
+	display: inline;
+	font-size: 10px;
+	margin: 7px;
+}
+
+#map_src_form div
+{
+	display: inline-block;
+}
+
+#button
+{
+	width: 250px;
+	text-transform: uppercase;
+	font-family: 'Saira Stencil One', sans-serif;
+	color: #8ac6d1;
+	text-shadow: 0.5px 0.5px #F39B94;
+	font-size: 25px;
+	background-color: #F687BF;
+	margin: 0px 60px;
+	margin-top: 20px;
+	-webkit-box-shadow: 10px 4px 37px 0px #609B9A;
+	-moz-box-shadow: 10px 4px 37px 0px #609B9A;
+	box-shadow: 10px 4px 37px 0px #609B9A;
+	-webkit-transition: all 1s;
+	-webkit-transition-timing: ease-in-out;
+
+}
+
+#button:hover
+{
+	transform: scale(1.1);
+}
+
+.md_map
+{
+	padding: 15px;
+	margin: 0;
+	display: grid;
+	grid-template-columns: repeat(40, 1fr);
+	grid-gap: 3px;
+}
+
+.spot_div
+{
+	margin: 0;
+	background-color: #FEEBD6;
+
+	max-width: 2.3vw;
+	max-height: 4vh;
+
+	transition: all 1s;
+	-webkit-transition: all 1s;
+	-webkit-transition-timing: ease-in-out;
+}
+
+.spot_div:hover
+{
+	 transform: rotate(360deg);
+	-ms-transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+}
+
+.player_x
+{
+	background-color: #8ac6d1;
+	background-image: url(../img/rabbit.svg);
+}
+
+.player_o
+{
+	background: url(../img/excited.svg) no-repeat;
+	background-color: #96F0AC;
+}
+
+.score
+{
+	display: flex;
+	justify-content: center;
+}
+
+.score p
+{
+	color: #F687BF;
+	text-shadow: 2px 2px #609B9A;
+	padding: 5px 0px;
+	padding-left: -10;
+	text-align: left;
+	display: flex;
+	justify-content: space-around;
+	font-size: 25px;
+	min-width: 360px;
+	height: 40px;
+}
+
+.score .score_player_x
+{
+	background-color: #8ac6d1;
+	transition: all 1s;
+	-webkit-transition: all 1s;
+	-webkit-transition-timing: ease-in-out;
+}
+
+.score .score_player_o
+{
+	background-color: #96F0AC;
+	transition: all 1s;
+	-webkit-transition: all 1s;
+	-webkit-transition-timing: ease-in-out;
+}
+
+@keyframes move_to_winner_x
+{
+	from{top:0;left:0;};
+	50% {top: 10px;}
+	to{top: 0px; left: 430px;}
+}
+
+@keyframes move_to_winner_o
+{
+	from{top:0;left:0;};
+	50% {top: 10px;}
+	to{top: 0px; left: -430px;}
+}
+
+@keyframes jump
+{
+	from{top:30px;};
+	to{top: 0px;}
+}
+
+.grandfa
+{
+	transform: scale(1);
+	position: relative;
+	height: 100px;
+	transition: all 3s;
+	-webkit-transition: all 3s;
+	-webkit-transition-timing: ease-in-out;
+	transition: transform .5s;
+	-webkit-transition: transform .5s;
+	-webkit-transition-timing: ease-in-out;
+	/* animation: move_to_winner 3s ease-in-out; */
+	/* position: relative; */
+}
+
+.winner_x
+{
+	transform: scale(1);
+	top: 0px; left: 430px;
+	animation: move_to_winner_x 3s ease-in-out;
+}
+
+.winner_o
+{
+	transform: scale(1);
+	top: 0px; left: -430px;
+	animation: move_to_winner_o 3s ease-in-out;
+}
