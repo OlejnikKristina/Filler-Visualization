@@ -1,20 +1,20 @@
-# Filler-Visualization
+# 🌈 Filler-Visualization
 Visualization for project Filler from my codding college. 
 
 [Here, you can check out Visualization for Filler:](https://olejnikkristina.github.io/Filler-Visualization/.)
  
-![](https://github.com/OlejnikKristina/Filler-Visualization/blob/master/img/filler_battle.gif)
+![](https://github.com/OlejnikKristina/Filler-Visualization/blob/master/img/filler_battle.gif | width=200)
  
 Filler is an algorithmic game which consists in filling a grid of a known size.
 Each successfully placed piece yields a number of points, and has only one player, the
 goal of the game could be to get the best score possible.
 
-## To run visualization you need folow next steps:
+## 🌈 To run visualization you need folow next steps:
 
 1) **Get battle map:**
-  Launch filler game:
+  🍍Launch filler game:
    ./filler_vm -p1 player1 -p2 player2 -v -f maps/map01 >> battle_map.txt
-  Or get ready map from:
+  🍍Or get ready map from:
     [here](https://raw.githubusercontent.com/OlejnikKristina/Filler-Visualization/master/map.txt)
 2) **Copy content of battle map**
 3) **Insert content of battle map to visualizer**
