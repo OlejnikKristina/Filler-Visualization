@@ -30,7 +30,7 @@ $(document).ready(function()
 	});
 
 	$("#button").click(function(){
-		map = $('#map_src').text();
+		map = $('#map_src').val();
 	});
 
 	function get_amount_of_moves()
